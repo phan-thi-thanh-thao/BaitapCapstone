@@ -1,4 +1,5 @@
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,7 +33,9 @@ html,
 }
 
 /*
-
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
 
 body {
   margin: 0; /* 1 */
@@ -51,14 +54,18 @@ hr {
   border-top-width: 1px; /* 3 */
 }
 
-
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
 
 abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
 
-
+/*
+Remove the default font size and weight for headings.
+*/
 
 h1,
 h2,
@@ -70,6 +77,9 @@ h6 {
   font-weight: inherit;
 }
 
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
 
 a {
   color: inherit;
@@ -85,6 +95,12 @@ strong {
   font-weight: bolder;
 }
 
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
 
 code,
 kbd,
@@ -124,11 +140,23 @@ sup {
   top: -0.5em;
 }
 
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
 table {
   text-indent: 0; /* 1 */
   border-color: inherit; /* 2 */
   border-collapse: collapse; /* 3 */
 }
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
 
 button,
 input,
@@ -147,11 +175,19 @@ textarea {
   padding: 0; /* 3 */
 }
 
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
 
 button,
 select {
   text-transform: none;
 }
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
 
 button,
 input:where([type='button']),
